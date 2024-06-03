@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Serve the index.html file at the root URL
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.post('/calculate', (req, res) => {
