@@ -2,7 +2,9 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3000;
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json());
 
 // Serve the index.html file at the root URL
 app.get('/', (req, res) => {
