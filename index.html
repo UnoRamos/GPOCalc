@@ -55,6 +55,27 @@
             Disclaimer: Please note that this calculator only provides estimated tuition fee prices and may vary or change without prior notice.
         </div>
     </div>
-    <script src="script.js"></script>
+        <script>
+        function calculateFee() {
+            const program = document.getElementById('program').value;
+            const units = document.getElementById('units').value;
+            const studentType = document.querySelector('input[name="studentType"]:checked').value;
+
+            fetch('/calculate', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ program, units, studentType }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('tuitionFee').innerText = data.tuitionFee.toFixed(2);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 </body>
 </html>
