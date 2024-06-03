@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
+}
+.header {
+    background-color: #800000;
+    color: white;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+.header img {
+    height: 80px;
+    margin-right: 20px;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+.header-text .main-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.header-text .sub-title {
+    font-size: 14px;
+}
+  
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="number"],
+select {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #600000;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: gray;
+}
+
+  .student-status {
+    display: flex; /* Arrange labels horizontally */
+    border: 1px solid black; /* Add a border for visual grouping */
+    padding: 5px; /* Add some padding for better spacing */
+  }
+  
+  .student-status label {
+    margin-right: 10px; /* Add space between radio buttons */
+  }

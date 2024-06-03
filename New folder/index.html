@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuition Fee Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="univ.png" alt="UP Logo">
+            <div class="header-text">
+                <div class="main-title">University of the Philippines Baguio</div>
+                <div class="sub-title">Graduate Program Office</div>
+            </div>
+        </div>
+      </header>
+    <div class="container">
+        <h1>Tuition Fee Calculator</h1>
+        <form id="tuitionForm">
+            <label for="program">Select Graduate Program:</label>
+            <select id="program" name="program">
+                <option value="1500">Master of Science in Conservation and Restoration Ecology</option>
+                <option value="1000">Master of Arts in History</option>
+                <option value="600">Master of Arts in Language and Literature</option>
+                <option value="600">Master of Arts in Social and Development Studies</option>
+                <option value="1500">Master of Management</option>
+                <option value="600">Master of Science in Mathematics</option>
+                <option value="1500">Doctor of Philosophy in Indigenous Studies</option>
+                <option value="1500">Doctor of Philosophy in Mathematics</option>
+            </select>
+
+            <label for="units">Enter Number of Units:</label>
+            <input type="number" id="units" name="units" value="3">
+            <label>Are you a new or old student?</label>              
+              <div class="student-status">
+                <label for="newStudent">
+                  <input type="radio" id="newStudent" name="studentType" value="new">
+                  New Student
+                </label>
+                <label for="oldStudent">
+                  <input type="radio" id="oldStudent" name="studentType" value="old">
+                  Old Student
+                </label>
+              </div>
+            <button type="button" onclick="calculateFee()">Calculate</button>
+        </form>
+
+        <div id="result">
+            Estimated Tuition Fee: ₱<span id="tuitionFee">0.00</span>
+        </div>
+
+        <div class="disclaimer">
+            Disclaimer: Please note that this calculator only provides estimated tuition fee prices and may vary or change without prior notice.
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
