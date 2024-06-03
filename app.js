@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/style.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'style.css'));
+});
+
 app.post('/calculate', (req, res) => {
     const { program, units, studentType } = req.body;
 
