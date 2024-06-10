@@ -6,102 +6,107 @@
     <title>Tuition Fee Calculator</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid black;
-}
-.header {
-    background-color: #800000;
-    color: white;
-    padding: 20px 20px;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Georgia', serif;
-}
-.header img {
-    height: 80px;
-    margin-right: 20px;
-}
-.header-text {
-    display: flex;
-    flex-direction: column;
-}
-.header-text .main-title {
-    font-size: 20px;
-    font-weight: bold;
-}
-.header-text .sub-title {
-    font-size: 14px;
-}
-  
-h1 {
-    text-align: center;
-}
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 30px 20px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid black;
+        }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
+        .header {
+            background-color: #800000;
+            color: white;
+            padding: 20px 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
 
-label {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
+        .header img {
+            height: 80px;
+            margin-right: 20px;
+        }
 
-input[type="number"],
-select {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 16px;
-}
+        .header-text {
+            display: flex;
+            flex-direction: column;
+        }
 
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #800000;
-    color: white;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
+        .header-text .main-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-button:hover {
-    background-color: #600000;
-}
+        .header-text .sub-title {
+            font-size: 14px;
+        }
 
-#result {
-    margin-top: 20px;
-    font-size: 18px;
-}
+        h1 {
+            text-align: center;
+        }
 
-.disclaimer {
-    margin-top: 20px;
-    font-size: 12px;
-    color: gray;
-}
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-  .student-status {
-    display: flex; /* Arrange labels horizontally */
-    border: 1px solid black; /* Add a border for visual grouping */
-    padding: 5px; /* Add some padding for better spacing */
-  }
-  
-  .student-status label {
-    margin-right: 10px; /* Add space between radio buttons */
-  }
+        label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"],
+        select {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #800000;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #600000;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: gray;
+        }
+
+        .student-status {
+            display: flex;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .student-status label {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -113,36 +118,37 @@ button:hover {
                 <div class="sub-title">Graduate Program Office</div>
             </div>
         </div>
-      </header>
+    </header>
     <div class="container">
         <h1>Tuition Fee Calculator</h1>
         <form id="tuitionForm">
             <label for="program">Select Graduate Program:</label>
             <select id="program" name="program">
-                <option value="1500">Master of Science in Conservation and Restoration Ecology</option>
-                <option value="1000">Master of Arts in History</option>
-                <option value="600">Master of Arts in Language and Literature</option>
-                <option value="600">Master of Arts in Social and Development Studies</option>
-                <option value="1500">Master of Management</option>
-                <option value="600">Master of Science in Mathematics</option>
-                <option value="1500">Doctor of Philosophy in Indigenous Studies</option>
-                <option value="1500">Doctor of Philosophy in Mathematics</option>
+                <option value="1500">Master of Science in Conservation and Restoration Ecology (₱1500/unit)</option>
+                <option value="1000">Master of Arts in History (₱1000/unit)</option>
+                <option value="600">Master of Arts in Language and Literature (₱600/unit)</option>
+                <option value="600">Master of Arts in Social and Development Studies (₱600/unit)</option>
+                <option value="1500">Master of Management (₱1500/unit)</option>
+                <option value="600">Master of Science in Mathematics (₱600/unit)</option>
+                <option value="1500">Doctor of Philosophy in Indigenous Studies (₱1500/unit)</option>
+                <option value="1500">Doctor of Philosophy in Mathematics (₱1500/unit)</option>
             </select>
 
             <label for="units">Enter Number of Units:</label>
             <input type="number" id="units" name="units" value="3">
+            
             <label>Are you a new or old student?</label>              
-              <div class="student-status">
+            <div class="student-status">
                 <label for="newStudent">
-                  <input type="radio" id="newStudent" name="studentType" value="new">
-                  New Student
+                    <input type="radio" id="newStudent" name="studentType" value="new">
+                    New Student
                 </label>
                 <label for="oldStudent">
-                  <input type="radio" id="oldStudent" name="studentType" value="old">
-                  Old Student
+                    <input type="radio" id="oldStudent" name="studentType" value="old">
+                    Old Student
                 </label>
-              </div>
-           <button type="button" onclick="calculateFee()">Calculate</button>
+            </div>
+            <button type="button" onclick="calculateFee()">Calculate</button>
         </form>
 
         <div id="result">
@@ -153,7 +159,7 @@ button:hover {
             Disclaimer: Please note that this calculator only provides estimated tuition fee prices and may vary or change without prior notice.
         </div>
     </div>
-        <script>
+    <script>
         function calculateFee() {
             const program = document.getElementById('program').value;
             const units = document.getElementById('units').value;
